@@ -1,0 +1,17 @@
+{
+  "created_on": "2026-10-29",
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "training_manifest": "manifest.csv",
+  "training_places": 51880,
+  "training_images": 424338,
+  "validation_places": 12514,
+  "validation_images": 105168,
+  "internal_retrieval_protocol": "place-disjoint GSV-Cities holdout; one query per selected place, remaining images in that place form gallery",
+  "internal_eval_manifest": "accuracy_eval_2048.csv",
+  "internal_eval_places": 2048,
+  "internal_eval_queries": 2048,
+  "internal_eval_gallery_images": 15131,
+  "seed_42_512_query_subset_matches": true,
+  "note": "Project-created internal evaluation only; not an official EfficientVPR benchmark or paper result. The 512-query subset match was verified by place ID and query image path."
+}

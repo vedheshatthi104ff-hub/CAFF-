@@ -1,0 +1,17 @@
+{
+  "created_on": "2026-10-29",
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "training_manifest": "C:\\Users\\Vedhesh Atthi\\Documents\\Codex\\2026-10-18\\referenced-chatgpt-conversation-this-is-an\\outputs\\CAFF-EfficientVPR\\data\\gsv_cities\\manifest.csv",
+  "training_places": 51880,
+  "training_images": 424338,
+  "validation_places": 12514,
+  "validation_images": 105168,
+  "internal_retrieval_protocol": "place-disjoint GSV-Cities holdout; one query per selected place, remaining images in that place form gallery",
+  "internal_eval_manifest": "C:\\Users\\Vedhesh Atthi\\Documents\\Codex\\2026-10-18\\referenced-chatgpt-conversation-this-is-an\\outputs\\CAFF-EfficientVPR\\data\\gsv_cities\\internal_eval_manifest.csv",
+  "internal_eval_places": 512,
+  "internal_eval_queries": 512,
+  "internal_eval_gallery_images": 3718,
+  "internal_eval_place_limit": 512,
+  "note": "This is a project-created internal validation split, not an official EfficientVPR benchmark split or paper result."
+}
