@@ -1,0 +1,1 @@
+{"profile": "gpu_laptop", "epoch": 1, "train_loss": 0.6715723609924317, "validation_loss": 0.9584479749202728, "mean_gate_weights": null, "epoch_seconds": 23.533951199962758, "device": "cuda", "parameter_counts": {"total": 29437705, "trainable": 29437705}, "status": "completed_epoch"}

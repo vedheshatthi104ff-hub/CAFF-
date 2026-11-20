@@ -1,0 +1,1 @@
+{"profile": "gpu_laptop_caff", "epoch": 1, "train_loss": 0.49713648796081544, "validation_loss": 0.4664490640163422, "mean_gate_weights": [0.5481866598129272, 0.45181334018707275], "epoch_seconds": 20.600148099998478, "device": "cuda", "parameter_counts": {"total": 30474507, "trainable": 1036802}, "status": "completed_epoch"}
