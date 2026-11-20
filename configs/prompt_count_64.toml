@@ -1,0 +1,41 @@
+# Paper-based baseline. Values from the paper are marked; all unspecified
+# implementation details are documented in docs/architecture.md.
+[model]
+use_caff = false
+pretrained = true
+pretrained_checkpoint = "checkpoints/dinov2_vits14_pretrain.pth"
+prompt_count = 64              # Supplement prompt-count ablation.
+scene_vpt_init_std = 0.02            # Inferred initialization.
+msia_heads = 6                       # Inferred; DINOv2-S width is 384.
+ole_gem_p = 3.0                      # Inferred implementation choice.
+ole_fusion = "orthogonal"            # Paper OLE; "concat" is the supplement ablation.
+descriptor_dim = 3456                # Paper-reported; 9 x 384.
+sgfs_compressed_tokens = 8           # Reconstructed from supplement + shape.
+backbone_trainable = true
+
+[data]
+data_root = "D:/archive"
+manifest = "data/gsv_cities/manifest.csv"
+validation_manifest = "data/gsv_cities/manifest.csv"
+image_size = 266                     # Paper-reported training resolution.
+test_image_size = 266                # Supplement ablation resolution.
+augment = false                      # Exact paper augmentation is not specified.
+num_workers = 4
+
+[training]
+profile = "research_run"
+epochs = 30                           # Paper-reported maximum.
+places_per_batch = 160               # Paper-reported.
+images_per_place = 4                 # Paper-reported.
+lr_main = 0.0002                      # Paper-reported.
+lr_backbone = 0.02                    # Paper-reported transcription; verify schedule before large run.
+weight_decay = 0.0001                # Inferred; paper does not specify.
+lr_decay_every = 5                   # Paper-reported.
+lr_decay_factor = 0.8                 # Paper-reported.
+ms_alpha = 1.0                       # Paper-reported.
+ms_beta = 50.0                       # Paper-reported.
+ms_lambda = 0.0                      # Paper-reported.
+seed = 42
+amp = true
+checkpoint = "checkpoints/prompt_count_64.pt"
+

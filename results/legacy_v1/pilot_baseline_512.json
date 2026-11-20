@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-10-28T20:02:40.997786+00:00",
+  "model": "baseline",
+  "config": "configs\\baseline.toml",
+  "checkpoint": "checkpoints\\baseline.pt",
+  "manifest": "data\\gsv_cities\\internal_eval_manifest.csv",
+  "device": "cuda",
+  "descriptor_dim": 3456,
+  "parameter_counts": {
+    "total": 29437705,
+    "trainable": 29437705
+  },
+  "query_metrics": {
+    "valid_queries": 512,
+    "total_queries": 512,
+    "recall": {
+      "R@1": 0.517578125,
+      "R@5": 0.703125,
+      "R@10": 0.763671875
+    }
+  },
+  "query_extraction_ms_per_image": 35.48601113288896,
+  "gallery_extraction_ms_per_image": 13.608148413126154,
+  "descriptor_storage_bytes": 58475520,
+  "peak_gpu_memory_bytes": 181600256,
+  "database_search_time_seconds": null,
+  "note": "Recall uses manifest place_id or GPS radius; explicit AmsterTime ground_truth_path rows use single-ground-truth matching."
+}

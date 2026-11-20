@@ -1,0 +1,44 @@
+[model]
+use_caff = true
+pretrained = true
+pretrained_checkpoint = "checkpoints/dinov2_vits14_pretrain.pth"
+prompt_count = 32
+scene_vpt_init_std = 0.02
+msia_heads = 6
+ole_gem_p = 3.0
+ole_fusion = "orthogonal"
+descriptor_dim = 3456
+sgfs_compressed_tokens = 8
+backbone_trainable = false          # Proposed staged fine-tune: freeze backbone for initial CAFF study.
+
+caff_hidden_dim = 128
+caff_dropout = 0.0
+caff_gate_mode = "learned"          # "static" = image-independent learned weights (control); "equal" = fixed 0.5/0.5 (no-op, equals baseline).
+
+[data]
+data_root = "D:/archive"
+manifest = "data/gsv_cities/manifest.csv"
+validation_manifest = "data/gsv_cities/manifest.csv"
+image_size = 266
+test_image_size = 322
+augment = false
+num_workers = 4
+
+[training]
+profile = "caff_finetune"
+epochs = 5                            # Development default; not a paper result.
+places_per_batch = 8
+images_per_place = 4
+lr_main = 0.0002
+lr_backbone = 0.00002
+weight_decay = 0.0001
+lr_decay_every = 5
+lr_decay_factor = 0.8
+ms_alpha = 1.0
+ms_beta = 50.0
+ms_lambda = 0.0
+seed = 42
+amp = true
+checkpoint = "checkpoints/caff.pt"
+freeze_base_for_caff = true
+

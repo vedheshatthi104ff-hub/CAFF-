@@ -1,0 +1,33 @@
+[gsv_cities]
+root = "D:/archive"
+version = "User-selected GSV-Cities release; observed 529506 images / 64394 city-scoped places"
+access = "Archive supplied locally; review and follow the applicable CC BY-NC-ND 4.0 terms before use."
+download_source = "https://github.com/amaralibey/gsv-cities"
+manifest = "data/gsv_cities/manifest.csv"
+manifest_root = "project"
+
+[pitts250k]
+root = "data/pitts250k"
+access = "Ask dataset authors for permission as directed by VPR-datasets-downloader."
+manifest = "manifest.csv"
+
+[msls]
+root = "data/msls"
+access = "Mapillary login plus acceptance of dataset terms and confidentiality requirements."
+manifest = "manifest.csv"
+
+[amstertime]
+root = "data/amstertime"
+access = "Public project / CC0 Kaggle listing observed; download mechanism may require Kaggle login."
+manifest = "manifest.csv"
+
+[eynsham]
+root = "data/eynsham"
+access = "Public rsync command documented by VPR-datasets-downloader; verify license and split."
+manifest = "manifest.csv"
+
+[svox]
+root = "data/svox"
+access = "Public downloader script documented by VPR-datasets-downloader; verify license and split."
+manifest = "manifest.csv"
+

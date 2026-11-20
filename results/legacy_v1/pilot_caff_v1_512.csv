@@ -1,0 +1,2 @@
+model,descriptor_dim,valid_queries,R@1,R@5,R@10,query_ms_per_image,gallery_ms_per_image
+CAFF,3456,512,0.390625,0.607421875,0.677734375,34.68006679679547,13.60681823561193

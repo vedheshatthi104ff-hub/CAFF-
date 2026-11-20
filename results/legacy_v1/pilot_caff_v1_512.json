@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-10-28T20:04:26.951691+00:00",
+  "model": "CAFF",
+  "config": "configs\\caff.toml",
+  "checkpoint": "checkpoints\\caff.pt",
+  "manifest": "data\\gsv_cities\\internal_eval_manifest.csv",
+  "device": "cuda",
+  "descriptor_dim": 3456,
+  "parameter_counts": {
+    "total": 30474507,
+    "trainable": 8417931
+  },
+  "query_metrics": {
+    "valid_queries": 512,
+    "total_queries": 512,
+    "recall": {
+      "R@1": 0.390625,
+      "R@5": 0.607421875,
+      "R@10": 0.677734375
+    }
+  },
+  "query_extraction_ms_per_image": 34.68006679679547,
+  "gallery_extraction_ms_per_image": 13.60681823561193,
+  "descriptor_storage_bytes": 58475520,
+  "peak_gpu_memory_bytes": 185592832,
+  "database_search_time_seconds": null,
+  "note": "Recall uses manifest place_id or GPS radius; explicit AmsterTime ground_truth_path rows use single-ground-truth matching."
+}
